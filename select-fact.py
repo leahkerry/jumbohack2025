@@ -2,9 +2,9 @@ import random
 import pandas as pd
 import numpy as np
 
-import {selectedTopics} from src/components/TopicsCheckboxes.jsx
+# import {selectedTopics} from src/components/TopicsCheckboxes.jsx'
 
-NUM_ANIMAL = 11235
+NUM_ANIMAL = 7734
 NUM_VOCAB = 6000
 NUM_FACTS = NUM_ANIMAL + NUM_VOCAB
 
@@ -18,8 +18,10 @@ print("Learn about the",
 print("!")
 print(animaldf.loc[(random_fact % NUM_ANIMAL), "text"].replace("\n", " "))
 
+print("")
+
 vocabfile = open('data/vocabs.csv', mode ='r')
 vocabdf = pd.read_csv(vocabfile, sep = '|').drop('Index', axis=1)
 print("The definition of the word", 
-      vocabdf.loc[(random_fact % NUM_VOCAB), "Word"], "is",
-      vocabdf.loc[(random_fact % NUM_VOCAB), "Definition"])
+      ("\"" + vocabdf.loc[(random_fact % NUM_VOCAB), "Word"].lower() + "\""), "is",
+      ("\"" + vocabdf.loc[(random_fact % NUM_VOCAB), "Definition"].lower() + "\""))

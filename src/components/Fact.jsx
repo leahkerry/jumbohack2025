@@ -10,9 +10,17 @@ export default function Fact() {
     const fetchFact = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+
+
+        const response = await fetch('data/alice_in_wonderland1.json')
+        //= await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
         const data = await response.json();
-        setFact(data.text);
+
+        const MAX_NUM_FACTS = data.length - 1
+        const fact_num = Math.floor(Math.random() * MAX_NUM_FACTS)
+        console.log(fact_num)
+        const fact = data[fact_num]
+        setFact(fact.content);
       } catch (error) {
         console.error("Error fetching fact:", error);
         setFact("Failed to load fact.");
