@@ -3,7 +3,7 @@
     "name": "Google Search Modifier",
     "version": "1.0",
     "description": "A Chrome extension to modify the Google Search page",
-    "permissions": ["scripting", "activeTab", "chrome_url_overrides"],
+    "permissions": ["scripting", "activeTab"],
     "host_permissions": ["https://www.google.com/*"],
     "chrome_url_overrides": {
 
