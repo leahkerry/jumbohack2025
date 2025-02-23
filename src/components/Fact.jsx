@@ -8,16 +8,39 @@ export default function Fact(props) {
   
     useEffect(() => {
         fetchFact(); // Fetch fact when the component mounts
-      }, []); // Empty dependency array means it runs only once
+      }, [props.topics]); // Empty dependency array means it runs only once
       
     const fetchFact = async () => {
       setLoading(true);
       try {
-        const categories = ['data/alice_in_wonderland.json',
-                            'data/tufts_interesting_facts.json',
-                            "data/vocabs.json",
-                            'data/animals.json',
-                            'data/historical_events.json']
+        const categories = []
+        for (const [key, value] of Object.entries(props.topics)) {
+          if (value) {
+            if (key === "Tufts") {
+              categories.push('data/tufts_interesting_facts.json');
+            }
+            if (key === "Alice in Wonderland") {
+              categories.push('data/alice_in_wonderland.json');
+            }
+            if (key === "Animals") {
+              categories.push('data/animals.json');
+            }
+            if (key === "History") {
+              categories.push('data/historical_events.json');
+            }
+            if (key === "Vocabulary") {
+              categories.push("data/vocabs.json");
+            }
+          }
+        }
+        if (categories.length === 0) {
+          categories.push('data/alice_in_wonderland.json',
+            'data/tufts_interesting_facts.json',
+            "data/vocabs.json",
+            'data/animals.json',
+            'data/historical_events.json');
+        }
+        
         const categor_num = Math.floor(Math.random() * categories.length);
 
         const response = await fetch(categories[categor_num]);
