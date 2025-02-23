@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   background-color: rgb(246, 185, 173);
+  
 }
 
 .App-logo {
@@ -36,6 +37,7 @@
     position: fixed;
     top: 0; left: 0;
 }
+
 
 .search-container {
     display: flex;
@@ -87,3 +89,15 @@
     color: #333; /* Adjust text color as needed */
   }
 
+  .api-fact {
+    display: flex;
+    text-wrap: wrap;
+    max-width: 70%;
+    text-align: center;
+  }
+  .fact-text {
+    display: flex; 
+    color: white;
+    font-size: 28px;
+    max-width: 100%;
+  }

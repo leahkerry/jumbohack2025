@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import "../App.css";
+
+
 export default function Fact() {
     const [fact, setFact] = useState("");
     const [loading, setLoading] = useState(false);

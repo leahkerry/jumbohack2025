@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="container">
 
-      <Title title="Byte Sized Facts"/>
+      <Title title="Byte Sized Facts" size='60px'/>
       <Fact />
       
       <SearchBar />
@@ -25,7 +25,7 @@ function App() {
         {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} />}
       </div>
       
-      <Title title="Powered by Byte-Sized Facts"/>
+      <Title title="Powered by Byte-Sized Facts" size='30px'/>
 
     </div>
     

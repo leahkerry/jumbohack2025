@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../App.css";
+
 // TopicsCheckboxes component with a form, checkboxes, and a submit button.
 export default function TopicsCheckboxes() {
     // Array of topics.

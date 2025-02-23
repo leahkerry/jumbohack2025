@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../App.css";
+
 // import { Input } from "@/components/ui/input.tsx";
 // import { Button } from "@/components/ui/button.tsx";
 // import { Search } from "lucide-react";
