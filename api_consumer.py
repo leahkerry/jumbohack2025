@@ -39,6 +39,15 @@ def get_space_facts(star_name=None):
     else:
         print("Error:", response.status_code, response.text)
 
+def get_planet_facts(planet_name):
+    api_url = 'https://api.api-ninjas.com/v1/planets?name={}'.format(planet_name)
+
+    response = requests.get(api_url, headers={'X-Api-Key': config.API_NINJAS})
+    if response.status_code == requests.codes.ok:
+        return response.text
+    else:
+        print("Error:", response.status_code, response.text)
+
 
 def get_historical_events(text):
     """
