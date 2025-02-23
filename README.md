@@ -6,12 +6,12 @@ Presented at JumboHack 2025 under the ___ track
 This aim of this project is to entertain people as they open a million tabs on our web browsers, as we people all do. This is a chrome extension that pulls data from a variety of sources (listed below) and shows it to them anytime they open a new tab. Users can select preferences that select the specific kinds of facts that they enjoy the most!
 
 
-Team Member Contributions:
-    Ezey Duru: Worked on the designs and the frontend, structuring the UI, picking the right typography/colors, and making sure all the data fits in exactly
-    Carmen Bechtel: UI/UX designer extraordinaire, working together with Ezey to do the above stated items as well
-    Leah Kerry: Designed and implemented the frontend and the GitHub repository. Implemented the extension frontend piece with dummy data to make sure it worked
-    Vivian Lau: backend data wrangling and data collection services. Worked a lot on the backend data shaping and connection to the frontend bits. Also worked on the user preferences logic
-    Subhanga Upadhyay: web scraping, data collection, data consistency, and connection to the frontend
+Team Member Contributions: \
+    **Ezey Duru**: Worked on the designs and the frontend, structuring the UI, picking the right typography/colors, and making sure all the data fits in exactly \
+    **Carmen Bechtel**: UI/UX designer extraordinaire, working together with Ezey to do the above stated items as well \
+    **Leah Kerry**: Designed and implemented the frontend and the GitHub repository. Implemented the extension frontend piece with dummy data to make sure it worked \
+    **Vivian Lau**: backend data wrangling and data collection services. Worked a lot on the backend data shaping and connection to the frontend bits. Also worked on the user preferences logic\
+    **Subhanga Upadhyay**: web scraping, data collection, data consistency, and connection to the frontend
 
 
 ## ACKNOWLEDGEMENTS, libraries, and tools
