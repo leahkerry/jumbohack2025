@@ -26,9 +26,9 @@ export default function SettingsBox({onClose, topics, setTopic}) {
 
     return (
         <div id="settings-overlay" onClick={handleOverlayClick} className="settingsbox">
-            <Title title="Byte Sized Settings"/>
-            <TopicsCheckboxes topics={topics} setTopic={setTopic}/>
-            <button onClick={onClose}>Close</button>
+        <Title title="Byte Sized Settings" size='35px'/>
+        <TopicsCheckboxes topics={topics} setTopic={setTopic}/>
+        <button onClick={onClose}>Close</button>
         </div>
     )
 }
