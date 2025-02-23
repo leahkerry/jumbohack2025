@@ -1,53 +1,11 @@
 #### Consuming all the publicly accessible APIs available to us that fits our needs
 
-# 1. API Ninjas
-
+import os
+import json
 import config
 import requests
 
-def get_animal_facts(animal_name):
-    """ 
-    Get animal facts. animal_name needs to be the animal's common name in lowercase
-    Examples: cheetah, fox 
-    
-    The API supports partial matches, so 'fox' will return information for 'gray fox' as well as 'red fox' 
-    """
-
-    api_url = 'https://api.api-ninjas.com/v1/animals?name={}'.format(animal_name)
-    response = requests.get(api_url, headers={'X-Api-Key': config.API_NINJAS})
-    if response.status_code == requests.codes.ok:
-        return response.text
-    
-    else:
-        print("Error:", response.status_code, response.text)
-
-
-def get_space_facts(star_name=None):
-    """
-    Get space (only stars currently) facts. We get detailed information on that star. 
-    We can do all 30 stars if we want. Honestly, only 3 or 4 should be enough because otherwise it
-    would only be interesting to star fanatics!
-
-    Common star names can be passed. Examples, vega or sirius
-    """
-
-    URL = f"https://api.api-ninjas.com/v1/stars?name={star_name}"
-    response = requests.get(URL, headers={'X-Api-Key': config.API_NINJAS})
-
-    if response.status_code == requests.codes.ok:
-        return response.text
-    else:
-        print("Error:", response.status_code, response.text)
-
-def get_planet_facts(planet_name):
-    api_url = 'https://api.api-ninjas.com/v1/planets?name={}'.format(planet_name)
-
-    response = requests.get(api_url, headers={'X-Api-Key': config.API_NINJAS})
-    if response.status_code == requests.codes.ok:
-        return response.text
-    else:
-        print("Error:", response.status_code, response.text)
-
+DATA_DIRECTORY = "data"
 
 def get_historical_events(text):
     """
@@ -55,10 +13,28 @@ def get_historical_events(text):
     """
 
     api_url = 'https://api.api-ninjas.com/v1/historicalevents?text={}'.format(text)
-
     response = requests.get(api_url, headers={'X-Api-Key': config.API_NINJAS})
+    historical_events = []
 
     if response.status_code == requests.codes.ok:
-        return response.text
+        data = json.loads(response.text)
+        
+        for d in data:
+            event_date = f"{d['month']}/{d['day']}/{d['year']}"
+            event_text = d['event']
+            event_text_split = event_text.split(" ")
+            event_text_split[0] = event_text_split[0].lower()
+            event_text = " ".join(event_text_split)
+            final_string = f"On {event_date}, {event_text}"
+            historical_events.append({
+                "content": final_string
+            })
+
+        file_name = "_".join(text.split(" "))
+        file_path_directory = os.path.join(DATA_DIRECTORY, f"{file_name}.json")
+        with open(file_path_directory, "w", encoding="utf-8") as f:
+            json.dump(historical_events, f, indent=4, ensure_ascii=False)
+
+        return historical_events
     else:
         print("Error:", response.status_code, response.text)
