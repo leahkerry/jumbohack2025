@@ -19,8 +19,8 @@ function App() {
     <div className="container">
 
       <Title title="Byte Sized Facts" size='60px'/>
-//       <Fact />
-      
+
+      <Fact topics ={selectedTopics}/>
       <SearchBar />
       
       <div>
@@ -30,7 +30,7 @@ function App() {
       </div>
       
 
-      <Fact topics ={selectedTopics}/>
+      
 
     </div>
     
