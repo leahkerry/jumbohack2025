@@ -1,9 +1,5 @@
-textarea[name='q'] {
-    border: 2px solid blue !important;
-  }
-  
-  .tF2Cxc {
-    background-color: lightgray;
-    padding: 10px;
-    border-radius: 5px;
-  }
+.tF2Cxc {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 5px;
+}
