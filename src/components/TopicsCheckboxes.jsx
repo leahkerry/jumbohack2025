@@ -23,9 +23,11 @@ export default function TopicsCheckboxes() {
       const savedTopics = Object.entries(selectedTopics)
         .filter(([_, isSelected]) => isSelected)
         .map(([topic]) => topic);
+      // Close window
+      
       console.log('Saved topics:', savedTopics);
       alert(`Saved topics: ${savedTopics.join(', ') || 'None'}`);
-      // Here, add logic to persist the settings, such as an API call.
+      // TODO: add logic to persist the settings, such as an API call.
     };
   
     return (
