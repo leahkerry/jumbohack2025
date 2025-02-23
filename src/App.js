@@ -20,7 +20,7 @@ function App() {
         {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} />}
       </div>
       
-      <Title title="Byte Sized Facts"/>
+      <Title title="Powered by Byte-Sized Facts"/>
       <SearchBar />
       <Fact />
     </div>
