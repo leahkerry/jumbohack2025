@@ -1,7 +1,7 @@
 # Bite Sized Facts
 
 ## Created by: Fact Sized Byters (Ezey Duru, Carmen Bechtel, Leah Kerry, Vivian Lau, Subhanga Upadhyay)
-Presented at JumboHack 2025 under the ___ track
+Presented at JumboHack 2025 under the education track
 
 This aim of this project is to entertain people as they open a million tabs on our web browsers, as we people all do. This is a chrome extension that pulls data from a variety of sources (listed below) and shows it to them anytime they open a new tab. Users can select preferences that select the specific kinds of facts that they enjoy the most!
 
