@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-export default function Fact() {
+
+export default function Fact(props) {
     const [fact, setFact] = useState("");
     const [loading, setLoading] = useState(false);
   

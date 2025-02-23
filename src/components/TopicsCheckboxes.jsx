@@ -1,26 +1,25 @@
 import { useState } from "react";
+
+
 // TopicsCheckboxes component with a form, checkboxes, and a submit button.
-export default function TopicsCheckboxes() {
+export default function TopicsCheckboxes(props) {
     // Array of topics.
-    const topics = ['General', 'Tufts', 'Crack a Smile'];
-  
+    const topics = ['Tufts', 'Alice in Wonderland', 'Animals', 'History', 'Vocabulary'];
+
     // Initialize state: each topic is a key set to false (unchecked).
-    const [selectedTopics, setSelectedTopics] = useState(
-      topics.reduce((acc, topic) => ({ ...acc, [topic]: false }), {})
-    );
   
     // Toggle a checkbox for a given topic.
     const handleCheckboxChange = (topic) => {
-      setSelectedTopics({
-        ...selectedTopics,
-        [topic]: !selectedTopics[topic],
+      props.setTopic({
+        ...props.topics,
+        [topic]: !props.topics[topic],
       });
     };
   
     // Handle form submission.
     const handleSubmit = (e) => {
       e.preventDefault(); // Prevent default form submission behavior.
-      const savedTopics = Object.entries(selectedTopics)
+      const savedTopics = Object.entries(props.topics)
         .filter(([_, isSelected]) => isSelected)
         .map(([topic]) => topic);
       // Close window
@@ -44,7 +43,7 @@ export default function TopicsCheckboxes() {
               <input
                 type="checkbox"
                 id={topic}
-                checked={selectedTopics[topic]}
+                checked={props.topics[topic]}
                 onChange={() => handleCheckboxChange(topic)}
                 // Using the provided blue as the checkbox accent.
                 style={{ accentColor: '#2e5aff' }}
@@ -72,7 +71,7 @@ export default function TopicsCheckboxes() {
         </form>
         <div className="mt-4" style={{ color: '#ae5883' }}>
           <strong>Selected Topics:</strong>{' '}
-          {Object.entries(selectedTopics)
+          {Object.entries(props.topics)
             .filter(([_, isSelected]) => isSelected)
             .map(([topic]) => topic)
             .join(', ') || 'None'}
