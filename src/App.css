@@ -1,5 +1,7 @@
+
 .App {
   text-align: center;
+  background-color: rgb(246, 185, 173);
 }
 
 .App-logo {
@@ -24,15 +26,12 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.settingsbox {
+    background-color: #0f1d42; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    padding: 20px;
+    position: fixed;
+    top: 0; left: 0;
 }
