@@ -21,6 +21,7 @@ export default function SearchBar() {
         onChange={(e) => setQuery(e.target.value)}
         className="flex-1 gap-2 border p-2 rounded-xl shadow-sm w-full max-w-md"
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+        id="searchbar"
       />
       {/* <button onClick={handleSearch} variant="outline">
         <Search className="w-5 h-5" />

@@ -14,15 +14,16 @@ function App() {
   return (
     <div className="container">
 
+      <Title title="Byte Sized Facts"/>
+      <Fact />
+      
+      <SearchBar />
+      
       <div>
         <SettingsButton onClick={() => setIsSettingsOpen(true)}/>
         {/* Show SettingsBox when isSettingsOpen is true */}
         {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} />}
       </div>
-      
-      <Title title="Byte Sized Facts"/>
-      <SearchBar />
-      <Fact />
     </div>
     
   );

@@ -10,9 +10,11 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: linear-gradient(#1b1e39, #702a87);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
