@@ -24,6 +24,9 @@ function App() {
         {/* Show SettingsBox when isSettingsOpen is true */}
         {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} />}
       </div>
+      
+      <Title title="Powered by Byte-Sized Facts"/>
+
     </div>
     
   );

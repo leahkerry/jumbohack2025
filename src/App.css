@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
 
 .App {
   text-align: center;
@@ -35,6 +36,7 @@
     position: fixed;
     top: 0; left: 0;
 }
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -57,3 +59,31 @@
     outline: none;
     transition: box-shadow 0.2s ease-in-out;
 }
+
+
+.settingsbutton button {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 16px;  /* Adjust as needed */
+    color: #fff;       /* White text */
+    background-color: #fcacac; /* Light pink background */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .settingsbutton button:hover {
+    background-color: #f08080; /* Slightly darker pink */
+  }
+
+  .search-bar-input {
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+
+  .fact-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 18px; /* Adjust size as needed */
+    color: #333; /* Adjust text color as needed */
+  }
+

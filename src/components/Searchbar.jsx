@@ -19,7 +19,7 @@ export default function SearchBar() {
         placeholder="Search on Google..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="flex-1 gap-2 border p-2 rounded-xl shadow-sm w-full max-w-md"
+        className="search-bar-input flex-1 gap-2 border p-2 rounded-xl shadow-sm w-full max-w-md"
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
         id="searchbar"
       />
