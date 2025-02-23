@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
 import SearchBar from "./components/Searchbar";
+import Title from "./components/Title";
+import SettingsBox from "./components/SettingsBox";
+import Fact from "./components/Fact";
 
 
 function App() {
@@ -8,14 +11,13 @@ function App() {
 
   return (
     <div className="container">
-      {/* <input
-        type="text"
-        placeholder="Search..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="search-bar"
-      /> */}
+       {/* <header> */}
+        <SettingsBox />
+      {/* </header> */}
+
+      <Title title="Byte Sized Facts"/>
       <SearchBar />
+      <Fact />
     </div>
     
   );
