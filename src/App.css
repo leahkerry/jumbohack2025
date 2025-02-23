@@ -37,8 +37,21 @@
     padding: 20px;
     position: fixed;
     top: 0; left: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
 }
 
+
+.settingsbox .title {
+
+    font-family: 'Pixelify Sans', sans-serif;
+  
+  
+  
+  }
 
 .search-container {
     display: flex;
@@ -47,6 +60,20 @@
     margin-top: 20px;
 }
   
+
+.settingsbutton {
+
+  display: flex; /* Enables flexbox */
+
+  justify-content: center; /* Centers the button horizontally */
+
+  align-items: center; /* Centers content vertically */
+
+  margin-top: 10px; /* Adds spacing above */
+
+  /*margin-bottom: px; /* Adds spacing below */
+
+}
 
 #search-bar:focus {
     box-shadow: 0px 1px 6px rgba(32, 33, 36, 0.28);
@@ -68,16 +95,25 @@
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 16px;  /* Adjust as needed */
     color: #fff;       /* White text */
-    background-color: #fcacac; /* Light pink background */
+    background-color: #f08080; /* Light pink background */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 10px; 
+
+    margin-bottom: 10px;
   }
   
   .settingsbutton button:hover {
-    background-color: #f08080; /* Slightly darker pink */
+    background-color: #c75e5e; /* Slightly darker pink */
   }
 
   .search-bar-input {

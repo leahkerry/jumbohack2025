@@ -60,24 +60,20 @@ export default function TopicsCheckboxes(props) {
               </label>
             </div>
           ))}
-          <button
-            type="submit"
-            className="mt-4 w-full py-2 rounded-md"
-            style={{
-              backgroundColor: '#2e5aff', // Button background.
-              color: '#fcacac'            // Button text color.
-            }}
-          >
-            Save Settings
-          </button>
-        </form>
-        <div className="mt-4" style={{ color: '#ae5883' }}>
-          <strong>Selected Topics:</strong>{' '}
+          <div className="mt-4" style={{ color: '#ae5883', display:'flex', justifyContent:'center', alignItems:'center', marginTop:'10px'}}>
+          <strong>Selected Topics:&nbsp;</strong>{' '}
           {Object.entries(props.topics)
             .filter(([_, isSelected]) => isSelected)
             .map(([topic]) => topic)
             .join(', ') || 'None'}
-        </div>
+          </div>
+          <div className="settingsbutton ">
+
+            <button type="submit"> Save Settings </button>
+
+            </div>
+        </form>
+        
       </div>
     );
   }
