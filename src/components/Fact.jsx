@@ -10,16 +10,20 @@ export default function Fact() {
     const fetchFact = async () => {
       setLoading(true);
       try {
+        const categories = ['data/alice_in_wonderland.json',
+                            'data/tufts_interesting_facts.json',
+                            "data/vocabs.json",
+                            'data/animals.json',
+                            'data/historical_events.json']
+        const categor_num = Math.floor(Math.random() * categories.length);
 
-
-        const response = await fetch('data/alice_in_wonderland1.json')
+        const response = await fetch(categories[categor_num]);
         //= await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
         const data = await response.json();
 
-        const MAX_NUM_FACTS = data.length - 1
-        const fact_num = Math.floor(Math.random() * MAX_NUM_FACTS)
-        console.log(fact_num)
-        const fact = data[fact_num]
+        const fact_num = Math.floor(Math.random() * data.length);
+        console.log(fact_num);
+        const fact = data[fact_num];
         setFact(fact.content);
       } catch (error) {
         console.error("Error fetching fact:", error);
