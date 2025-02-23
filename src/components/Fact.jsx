@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "../App.css";
 
+export default function Fact(props) {
 
-export default function Fact() {
     const [fact, setFact] = useState("");
     const [loading, setLoading] = useState(false);
   
@@ -13,9 +13,21 @@ export default function Fact() {
     const fetchFact = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
+        const categories = ['data/alice_in_wonderland.json',
+                            'data/tufts_interesting_facts.json',
+                            "data/vocabs.json",
+                            'data/animals.json',
+                            'data/historical_events.json']
+        const categor_num = Math.floor(Math.random() * categories.length);
+
+        const response = await fetch(categories[categor_num]);
+        //= await fetch("https://uselessfacts.jsph.pl/random.json?language=en");
         const data = await response.json();
-        setFact(data.text);
+
+        const fact_num = Math.floor(Math.random() * data.length);
+        console.log(fact_num);
+        const fact = data[fact_num];
+        setFact(fact.content);
       } catch (error) {
         console.error("Error fetching fact:", error);
         setFact("Failed to load fact.");

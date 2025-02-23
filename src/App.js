@@ -10,22 +10,27 @@ import SettingsButton from "./components/SettingsButton";
 function App() {
   const [query, setQuery] = useState("");
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const topics = ['Tufts', 'Alice in Wonderland', 'Animals', 'History', 'Vocabulary'];
+  const [selectedTopics, setSelectedTopics] = useState(
+    topics.reduce((acc, topic) => ({ ...acc, [topic]: false }), {})
+  );
 
   return (
     <div className="container">
 
       <Title title="Byte Sized Facts" size='60px'/>
-      <Fact />
+//       <Fact />
       
       <SearchBar />
       
       <div>
-        <SettingsButton onClick={() => setIsSettingsOpen(true)}/>
+        <SettingsButton onClick={() => setIsSettingsOpen(true)} />
         {/* Show SettingsBox when isSettingsOpen is true */}
-        {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} />}
+        {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} topics ={selectedTopics} setTopic={setSelectedTopics}/>}
       </div>
       
-      <Title title="Powered by Byte-Sized Facts" size='30px'/>
+
+      <Fact topics ={selectedTopics}/>
 
     </div>
     

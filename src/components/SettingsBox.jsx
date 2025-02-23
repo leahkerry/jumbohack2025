@@ -3,7 +3,7 @@ import TopicsCheckboxes from "./TopicsCheckboxes";
 import Title from "./Title";
 import "../App.css";
 
-export default function SettingsBox({onClose}) {
+export default function SettingsBox({onClose, topics, setTopic}) {
     // Close when clicking outside the settings box
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     useEffect(() => {
@@ -26,9 +26,9 @@ export default function SettingsBox({onClose}) {
 
     return (
         <div id="settings-overlay" onClick={handleOverlayClick} className="settingsbox">
-            <Title title="Byte Sized Settings" size='35px'/>
-            <TopicsCheckboxes />
-            <button onClick={onClose}>Close</button>
+        <Title title="Byte Sized Settings" size='35px'/>
+        <TopicsCheckboxes topics={topics} setTopic={setTopic}/>
+        <button onClick={onClose}>Close</button>
         </div>
     )
 }
