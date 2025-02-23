@@ -21,6 +21,8 @@ function App() {
       <Title title="Byte Sized Facts" size='60px'/>
       <Fact topics ={selectedTopics}/>
       
+
+
       <SearchBar />
       
       <div>
@@ -28,6 +30,7 @@ function App() {
         {/* Show SettingsBox when isSettingsOpen is true */}
         {isSettingsOpen && <SettingsBox onClose={() => setIsSettingsOpen(false)} topics ={selectedTopics} setTopic={setSelectedTopics}/>}
       </div>
+
 
     </div>
     

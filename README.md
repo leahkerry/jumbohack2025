@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Bite Sized Facts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Created by: Fact Sized Byters (Ezey Duru, Carmen Bechtel, Leah Kerry, Vivian Lau, Subhanga Upadhyay)
+Presented at JumboHack 2025 under the education track
 
-## Available Scripts
+This aim of this project is to entertain people as they open a million tabs on our web browsers, as we people all do. This is a chrome extension that pulls data from a variety of sources (listed below) and shows it to them anytime they open a new tab. Users can select preferences that select the specific kinds of facts that they enjoy the most!
 
-In the project directory, you can run:
 
-### `npm start`
+Team Member Contributions: \
+    **Ezey Duru**: Worked on the designs and the frontend, structuring the UI, picking the right typography/colors, and making sure all the data fits in exactly \
+    **Carmen Bechtel**: UI/UX designer extraordinaire, working together with Ezey to do the above stated items as well \
+    **Leah Kerry**: Designed and implemented the frontend and the GitHub repository. Implemented the extension frontend piece with dummy data to make sure it worked \
+    **Vivian Lau**: backend data wrangling and data collection services. Worked a lot on the backend data shaping and connection to the frontend bits. Also worked on the user preferences logic\
+    **Subhanga Upadhyay**: web scraping, data collection, data consistency, and connection to the frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ACKNOWLEDGEMENTS, libraries, and tools
 
-### `npm test`
+1. generative AI models = ChatGPT (thank you Ezgi Zeren)
+2. Backend -> Beautifulsoup, Requests, Postman
+3. Frontend -> React, Nodejs, CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## REFLECTION
+### What motivated your team to choose this project?
+We love learning little facts throughout the day, but the existing "daily fact" calendars and phone widgets offer little to no customization. It's time we change that! We were thinking about a simple yet elegant way to make people's lives better, on the daily. And the bonus point? Users can pick the facts they want to be shown more. Yay micro-learning!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Potential future work/improvements?
+We wanted to weigh each type of fact by the number of facts in that particular category. This is because Alice in Wonderland may have only 30 facts, but for animals, we have around 6000. We want every category to have a fair chance, unless the user explicitly wants certain categories. Maybe adjusting the frequency of the cateogories yourself...?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Another thing we could do, if we wanted to work really hard, would be to conduct an analysis on what types of facts people are drawn to. Some categories we picked were: animals, history, space, Tufts, etc. We can introduce a lot more cateogories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We could add good, high quality images to supplement our facts with
 
-### `npm run eject`
+### What is a challenge you encountered while making this?
+Packages all conflicted. Versions, operating systems, etc. Learning how to do web scraping. Balancing number of facts between categories. Finding correct sources of facts. Wrestling with APIs, trying to find them in the first place, ensuring data consistency across multiple sources, the choice of designing a backend system - what it would be, would be implement a database or not, etc? THE TIME CONSTRAINT!!!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### What is a fun or interesting experience you had with another hacker?
+It was just a complete blast. With the entire team of hackers. The whole time. Cannot pick one moment or experience. Bonding over (all of our) our love for pineapples and oranges was one
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Data acknowledgements and sources used
+1. All Snapple Facts:
+https://gist.github.com/emctague/c47bea79b013419274d5c353aec31edc 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Vocabs data
+vocabs.csv:
+https://github.com/sunh423/SAT-Vocabulary-Study-Tool/blob/master/vocabs.csv 
 
-## Learn More
+3. Animals CSV
+animal-fun-facts:
+https://github.com/ekohrt/animal-fun-facts-dataset/blob/main/animal-fun-facts-dataset.csv  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Tufts Fun Facts data: \
+    Admitsee: https://www.admitsee.com/blog/10-fun-facts-about-tufts-university
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Tufts traditions: https://admissions.tufts.edu/discover-tufts/tufts-traditions/
 
-### Code Splitting
+5. Alice in Wonderland data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Beano: https://www.beano.com/facts/books/alice-in-wonderland-facts
 
-### Analyzing the Bundle Size
+    Booktrust: https://www.booktrust.org.uk/news-and-features/features/2016/may/10-crazy-things-you-need-to-know-about-alice-in-wonderland/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+6. API Ninja: https://www.api-ninjas.com/
 
-### Making a Progressive Web App
+    - Historical events: World Wars, Cold War, French Revolution, Great Depression, Roman Empire
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
